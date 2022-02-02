@@ -1,0 +1,24 @@
+[submodule "sw/Controller/hal_avr_m328p"]
+	path = sw/Controller/hal_avr_m328p
+	url = git@github.com:andreaslagler/hal_avr_m328p
+[submodule "sw/Controller/avr_common"]
+	path = sw/Controller/avr_common
+	url = git@github.com:andreaslagler/avr_common
+[submodule "sw/Controller/avr_synth_common"]
+	path = sw/Controller/avr_synth_common
+	url = git@github.com:andreaslagler/avr_synth_common
+[submodule "sw/Controller/avr_devices"]
+	path = sw/Controller/avr_devices
+	url = git@github.com:andreaslagler/avr_devices
+[submodule "sw/Audio.X/dspic33_fp_lib"]
+	path = sw/Audio.X/dspic33_fp_lib
+	url = git@github.com:andreaslagler/dspic33_fp_lib
+[submodule "sw/Audio.X/dspic33_synth_lib"]
+	path = sw/Audio.X/dspic33_synth_lib
+	url = git@github.com:andreaslagler/dspic33_synth_lib
+[submodule "sw/WaveGen.X/dspic33_fp_lib"]
+	path = sw/WaveGen.X/dspic33_fp_lib
+	url = git@github.com:andreaslagler/dspic33_fp_lib
+[submodule "sw/WaveGen.X/dspic33_synth_lib"]
+	path = sw/WaveGen.X/dspic33_synth_lib
+	url = git@github.com:andreaslagler/dspic33_synth_lib

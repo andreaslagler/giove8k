@@ -1,0 +1,255 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 8 9
+Title "DAC"
+Date "2021-07-24"
+Rev "1.0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 "I2S Audio DAC with volume control"
+$EndDescr
+Text Label 5200 2200 2    60   ~ 0
+BIAS
+Text Label 5200 4100 2    60   ~ 0
+DACR
+Text Label 5200 2400 2    60   ~ 0
+DACL
+Wire Wire Line
+	5300 2200 5200 2200
+Wire Wire Line
+	5300 2400 5200 2400
+$Comp
+L AudioBoard-rescue:R_Small-Audio-DAC-rescue R6
+U 1 1 60757445
+P 3850 2400
+F 0 "R6" H 3880 2420 50  0000 L CNN
+F 1 "3k3" H 3880 2360 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 3850 2400 60  0001 C CNN
+F 3 "" H 3850 2400 60  0000 C CNN
+	1    3850 2400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 2250 3350 2250
+Wire Wire Line
+	3850 2250 3950 2250
+Text Label 3950 2250 0    60   ~ 0
+BIAS
+Text Label 3350 2350 0    60   ~ 0
+DACL
+Text Label 3350 2150 0    60   ~ 0
+DACR
+Wire Wire Line
+	3850 2250 3850 2300
+Wire Wire Line
+	3850 2500 3850 2550
+Text HLabel 2150 2150 0    50   Input ~ 0
+BCK
+Text HLabel 2150 2250 0    50   Input ~ 0
+WS
+Text HLabel 2150 2350 0    50   Input ~ 0
+DATA
+$Comp
+L AudioBoard-rescue:R_Small-Audio-DAC-rescue R8
+U 1 1 6098C720
+P 5600 4400
+F 0 "R8" H 5630 4420 50  0000 L CNN
+F 1 "1k5" H 5630 4360 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5600 4400 60  0001 C CNN
+F 3 "" H 5600 4400 60  0000 C CNN
+	1    5600 4400
+	0    1    -1   0   
+$EndComp
+Text Label 5200 3900 2    60   ~ 0
+BIAS
+Wire Wire Line
+	5300 3900 5200 3900
+Wire Wire Line
+	5300 4100 5200 4100
+Connection ~ 3850 2250
+$Comp
+L AudioBoard-rescue:TDA1543-TDA1543-DAC-rescue U15
+U 1 1 60923D10
+P 2750 2250
+F 0 "U15" H 2300 2500 50  0000 C CNN
+F 1 "TDA1543" H 3050 2500 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 2750 1650 50  0001 C CNN
+F 3 "" H 2750 2500 50  0001 C CNN
+	1    2750 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5VA #PWR0122
+U 1 1 615AE1C7
+P 2400 3150
+F 0 "#PWR0122" H 2400 3000 50  0001 C CNN
+F 1 "+5VA" H 2415 3323 50  0000 C CNN
+F 2 "" H 2400 3150 50  0001 C CNN
+F 3 "" H 2400 3150 50  0001 C CNN
+	1    2400 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDA #PWR0120
+U 1 1 615AEA38
+P 2750 2550
+F 0 "#PWR0120" H 2750 2300 50  0001 C CNN
+F 1 "GNDA" H 2755 2377 50  0000 C CNN
+F 2 "" H 2750 2550 50  0001 C CNN
+F 3 "" H 2750 2550 50  0001 C CNN
+	1    2750 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:NE5532 U16
+U 2 1 615B0047
+P 5600 4000
+F 0 "U16" H 5600 4367 50  0000 C CNN
+F 1 "NE5532" H 5600 4276 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 5600 4000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne5532.pdf" H 5600 4000 50  0001 C CNN
+	2    5600 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:NE5532 U16
+U 3 1 615B12D7
+P 2500 3450
+F 0 "U16" H 2458 3496 50  0000 L CNN
+F 1 "NE5532" H 2458 3405 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 2500 3450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne5532.pdf" H 2500 3450 50  0001 C CNN
+	3    2500 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:NE5532 U16
+U 1 1 615AF4B8
+P 5600 2300
+F 0 "U16" H 5600 2667 50  0000 C CNN
+F 1 "NE5532" H 5600 2576 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 5600 2300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne5532.pdf" H 5600 2300 50  0001 C CNN
+	1    5600 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 4100 5300 4400
+Wire Wire Line
+	5300 4400 5500 4400
+Connection ~ 5300 4100
+Wire Wire Line
+	5900 4000 5900 4400
+Wire Wire Line
+	5900 4400 5700 4400
+$Comp
+L Device:C C43
+U 1 1 615CB4D5
+P 5600 4700
+F 0 "C43" V 5348 4700 50  0000 C CNN
+F 1 "3n3" V 5439 4700 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 5638 4550 50  0001 C CNN
+F 3 "~" H 5600 4700 50  0001 C CNN
+	1    5600 4700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5300 4400 5300 4700
+Wire Wire Line
+	5300 4700 5450 4700
+Connection ~ 5300 4400
+Wire Wire Line
+	5900 4400 5900 4700
+Wire Wire Line
+	5900 4700 5750 4700
+Connection ~ 5900 4400
+$Comp
+L AudioBoard-rescue:R_Small-Audio-DAC-rescue R7
+U 1 1 615D12FA
+P 5600 2700
+F 0 "R7" H 5630 2720 50  0000 L CNN
+F 1 "1k5" H 5630 2660 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5600 2700 60  0001 C CNN
+F 3 "" H 5600 2700 60  0000 C CNN
+	1    5600 2700
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	5300 2400 5300 2700
+Wire Wire Line
+	5300 2700 5500 2700
+Wire Wire Line
+	5900 2300 5900 2700
+Wire Wire Line
+	5900 2700 5700 2700
+$Comp
+L Device:C C42
+U 1 1 615D1308
+P 5600 3000
+F 0 "C42" V 5348 3000 50  0000 C CNN
+F 1 "3n3" V 5439 3000 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 5638 2850 50  0001 C CNN
+F 3 "~" H 5600 3000 50  0001 C CNN
+	1    5600 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5300 2700 5300 3000
+Wire Wire Line
+	5300 3000 5450 3000
+Connection ~ 5300 2700
+Wire Wire Line
+	5900 2700 5900 3000
+Wire Wire Line
+	5900 3000 5750 3000
+Connection ~ 5900 2700
+Connection ~ 5300 2400
+$Comp
+L power:+5VA #PWR0119
+U 1 1 615D3B6E
+P 2750 1950
+F 0 "#PWR0119" H 2750 1800 50  0001 C CNN
+F 1 "+5VA" H 2765 2123 50  0000 C CNN
+F 2 "" H 2750 1950 50  0001 C CNN
+F 3 "" H 2750 1950 50  0001 C CNN
+	1    2750 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDA #PWR0123
+U 1 1 615D5D5F
+P 2400 3750
+F 0 "#PWR0123" H 2400 3500 50  0001 C CNN
+F 1 "GNDA" H 2405 3577 50  0000 C CNN
+F 2 "" H 2400 3750 50  0001 C CNN
+F 3 "" H 2400 3750 50  0001 C CNN
+	1    2400 3750
+	1    0    0    -1  
+$EndComp
+Text HLabel 6000 2300 2    50   Input ~ 0
+OUT_L
+Wire Wire Line
+	5900 2300 6000 2300
+Connection ~ 5900 2300
+Text HLabel 6000 4000 2    50   Input ~ 0
+OUT_R
+Wire Wire Line
+	5900 4000 6000 4000
+Connection ~ 5900 4000
+$Comp
+L power:GNDA #PWR0121
+U 1 1 6160C017
+P 3850 2550
+F 0 "#PWR0121" H 3850 2300 50  0001 C CNN
+F 1 "GNDA" H 3855 2377 50  0000 C CNN
+F 2 "" H 3850 2550 50  0001 C CNN
+F 3 "" H 3850 2550 50  0001 C CNN
+	1    3850 2550
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

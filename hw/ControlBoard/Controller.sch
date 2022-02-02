@@ -1,0 +1,650 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 24
+Title "Controller"
+Date "2021-07-22"
+Rev "1.0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 3000 1100 800  1550
+U 60F8CC98
+F0 "Controller_CPU" 50
+F1 "CPU.sch" 50
+F2 "RX" I L 3000 1250 50 
+F3 "TX" I L 3000 1350 50 
+F4 "INT0" I L 3000 1550 50 
+F5 "INT1" I L 3000 1650 50 
+F6 "AN0" I R 3800 1250 50 
+F7 "AN1" I R 3800 1350 50 
+F8 "AN2" I R 3800 1450 50 
+F9 "AN3" I R 3800 1550 50 
+F10 "~SS~" I L 3000 1850 50 
+F11 "MOSI" I L 3000 1950 50 
+F12 "MISO" I L 3000 2050 50 
+F13 "SCK" I L 3000 2150 50 
+F14 "MUX0" I R 3800 2050 50 
+F15 "MUX1" I R 3800 2150 50 
+F16 "MUX2" I R 3800 2250 50 
+F17 "AN4" I R 3800 1650 50 
+F18 "AN5" I R 3800 1750 50 
+F19 "CLK_IN" I L 3000 2350 50 
+F20 "CLK_OUT" I L 3000 2450 50 
+F21 "SYNC_OUT" I L 3000 2550 50 
+$EndSheet
+$Sheet
+S 3250 3150 600  900 
+U 60F8DB17
+F0 "Controller_SSMux" 50
+F1 "LineMUX.sch" 50
+F2 "~SS0" I R 3850 3250 50 
+F3 "A2" I L 3250 3450 50 
+F4 "A0" I L 3250 3250 50 
+F5 "A1" I L 3250 3350 50 
+F6 "~SS" I L 3250 3650 50 
+F7 "~SS1" I R 3850 3350 50 
+F8 "~SS2" I R 3850 3450 50 
+F9 "~SS3" I R 3850 3550 50 
+F10 "~SS4" I R 3850 3650 50 
+F11 "~SS5" I R 3850 3750 50 
+F12 "~SS6" I R 3850 3850 50 
+F13 "~SS7" I R 3850 3950 50 
+$EndSheet
+$Sheet
+S 1700 5650 600  700 
+U 60F8E346
+F0 "Controller_Buttons" 50
+F1 "Buttons.sch" 50
+F2 "~SS" I L 1700 5750 50 
+F3 "SCK" I L 1700 5850 50 
+F4 "SDI" I L 1700 5950 50 
+F5 "SDO" I L 1700 6050 50 
+F6 "INT" I L 1700 6250 50 
+F7 "SYNC_IN" I L 1700 6150 50 
+$EndSheet
+$Sheet
+S 3050 5650 600  700 
+U 60F8E6B6
+F0 "Controller_Buttons_Encoders" 50
+F1 "ButtonsEncoders.sch" 50
+F2 "~SS" I L 3050 5750 50 
+F3 "SCK" I L 3050 5850 50 
+F4 "SDI" I L 3050 5950 50 
+F5 "SDO" I L 3050 6050 50 
+F6 "INT" I L 3050 6250 50 
+$EndSheet
+$Sheet
+S 1050 1100 550  300 
+U 60F8EB8E
+F0 "MIDI" 50
+F1 "MIDI.sch" 50
+F2 "Rx" I L 1050 1300 50 
+F3 "Tx" I L 1050 1200 50 
+$EndSheet
+Text Label 4000 3250 0    50   ~ 0
+~SS0
+Text Label 4000 3350 0    50   ~ 0
+~SS1
+Text Label 4000 3450 0    50   ~ 0
+~SS2
+Text Label 4000 3550 0    50   ~ 0
+~SS3
+Text Label 4000 3650 0    50   ~ 0
+~SS4
+Text Label 4000 3750 0    50   ~ 0
+~SS5
+Wire Wire Line
+	3850 3250 4000 3250
+Wire Wire Line
+	3850 3350 4000 3350
+Wire Wire Line
+	3850 3450 4000 3450
+Wire Wire Line
+	3850 3550 4000 3550
+Wire Wire Line
+	3850 3650 4000 3650
+Wire Wire Line
+	3850 3750 4000 3750
+Wire Wire Line
+	3850 3850 4000 3850
+Wire Wire Line
+	3850 3950 4000 3950
+Wire Wire Line
+	3250 3250 3100 3250
+Wire Wire Line
+	3250 3350 3100 3350
+Wire Wire Line
+	3250 3450 3100 3450
+Wire Wire Line
+	3250 3650 3100 3650
+Text Label 3100 3250 2    50   ~ 0
+MUX0
+Text Label 3100 3350 2    50   ~ 0
+MUX1
+Text Label 3100 3450 2    50   ~ 0
+MUX2
+Text Label 3100 3650 2    50   ~ 0
+~SS
+Wire Wire Line
+	3800 2050 3950 2050
+Wire Wire Line
+	3800 2150 3950 2150
+Wire Wire Line
+	3800 2250 3950 2250
+Wire Wire Line
+	3000 1850 2850 1850
+Text Label 3950 2050 0    50   ~ 0
+MUX0
+Text Label 3950 2150 0    50   ~ 0
+MUX1
+Text Label 3950 2250 0    50   ~ 0
+MUX2
+Text Label 2850 1850 2    50   ~ 0
+~SS
+Text Label 2850 1950 2    50   ~ 0
+MOSI
+Text Label 2850 2050 2    50   ~ 0
+MISO
+Text Label 2850 2150 2    50   ~ 0
+SCK
+Text Label 2850 1250 2    50   ~ 0
+Rx
+Text Label 2850 1350 2    50   ~ 0
+Tx
+Text Label 2850 1550 2    50   ~ 0
+INT0
+Text Label 2850 1650 2    50   ~ 0
+INT1
+Wire Wire Line
+	2850 1250 3000 1250
+Wire Wire Line
+	2850 1350 3000 1350
+Wire Wire Line
+	2850 1550 3000 1550
+Wire Wire Line
+	2850 1650 3000 1650
+Wire Wire Line
+	2850 1950 3000 1950
+Wire Wire Line
+	2850 2050 3000 2050
+Wire Wire Line
+	2850 2150 3000 2150
+Text Label 900  1300 2    50   ~ 0
+Rx
+Text Label 900  1200 2    50   ~ 0
+Tx
+Wire Wire Line
+	900  1300 1050 1300
+Wire Wire Line
+	900  1200 1050 1200
+Wire Wire Line
+	1700 5750 1550 5750
+Text Label 1550 5750 2    50   ~ 0
+~SS1
+Text Label 1550 5950 2    50   ~ 0
+MOSI
+Text Label 1550 6050 2    50   ~ 0
+MISO
+Text Label 1550 5850 2    50   ~ 0
+SCK
+Text Label 2900 6250 2    50   ~ 0
+INT0
+Wire Wire Line
+	1550 6250 1700 6250
+Wire Wire Line
+	1550 5950 1700 5950
+Wire Wire Line
+	1550 6050 1700 6050
+Wire Wire Line
+	1550 5850 1700 5850
+Wire Wire Line
+	3050 5750 2900 5750
+Text Label 2900 5750 2    50   ~ 0
+~SS7
+Text Label 2900 5950 2    50   ~ 0
+MOSI
+Text Label 2900 6050 2    50   ~ 0
+MISO
+Text Label 2900 5850 2    50   ~ 0
+SCK
+Text Label 1550 6250 2    50   ~ 0
+INT1
+Wire Wire Line
+	2900 6250 3050 6250
+Wire Wire Line
+	2900 5950 3050 5950
+Wire Wire Line
+	2900 6050 3050 6050
+Wire Wire Line
+	2900 5850 3050 5850
+$Sheet
+S 5350 2950 550  600 
+U 60F97ADD
+F0 "Potentiometers (1)" 50
+F1 "Potentiometers1.sch" 50
+F2 "A0" I L 5350 3050 50 
+F3 "Vout" I L 5350 3450 50 
+F4 "A1" I L 5350 3150 50 
+F5 "A2" I L 5350 3250 50 
+$EndSheet
+$Sheet
+S 5350 3850 550  600 
+U 60F983BE
+F0 "Potentiometers (2)" 50
+F1 "Potentiometers2.sch" 50
+F2 "A0" I L 5350 3950 50 
+F3 "Vout" I L 5350 4350 50 
+F4 "A1" I L 5350 4050 50 
+F5 "A2" I L 5350 4150 50 
+$EndSheet
+$Sheet
+S 5350 4750 550  600 
+U 60F98773
+F0 "Potentiometers (3)" 50
+F1 "Potentiometers3.sch" 50
+F2 "A0" I L 5350 4850 50 
+F3 "Vout" I L 5350 5250 50 
+F4 "A1" I L 5350 4950 50 
+F5 "A2" I L 5350 5050 50 
+$EndSheet
+$Sheet
+S 5350 5650 550  600 
+U 60F988FC
+F0 "Potentiometers (4)" 50
+F1 "Potentiometers4.sch" 50
+F2 "A0" I L 5350 5750 50 
+F3 "Vout" I L 5350 6150 50 
+F4 "A1" I L 5350 5850 50 
+F5 "A2" I L 5350 5950 50 
+$EndSheet
+$Sheet
+S 5350 6550 550  600 
+U 60F98A81
+F0 "Potentiometers (5)" 50
+F1 "Potentiometers5.sch" 50
+F2 "A0" I L 5350 6650 50 
+F3 "Vout" I L 5350 7050 50 
+F4 "A1" I L 5350 6750 50 
+F5 "A2" I L 5350 6850 50 
+$EndSheet
+Wire Wire Line
+	5350 3050 5200 3050
+Wire Wire Line
+	5350 3150 5200 3150
+Wire Wire Line
+	5350 3250 5200 3250
+Text Label 5200 3050 2    50   ~ 0
+MUX0
+Text Label 5200 3150 2    50   ~ 0
+MUX1
+Text Label 5200 3250 2    50   ~ 0
+MUX2
+Wire Wire Line
+	5350 3950 5200 3950
+Wire Wire Line
+	5350 4050 5200 4050
+Wire Wire Line
+	5350 4150 5200 4150
+Text Label 5200 3950 2    50   ~ 0
+MUX0
+Text Label 5200 4050 2    50   ~ 0
+MUX1
+Text Label 5200 4150 2    50   ~ 0
+MUX2
+Wire Wire Line
+	5350 4850 5200 4850
+Wire Wire Line
+	5350 4950 5200 4950
+Wire Wire Line
+	5350 5050 5200 5050
+Text Label 5200 4850 2    50   ~ 0
+MUX0
+Text Label 5200 4950 2    50   ~ 0
+MUX1
+Text Label 5200 5050 2    50   ~ 0
+MUX2
+Wire Wire Line
+	5350 5750 5200 5750
+Wire Wire Line
+	5350 5850 5200 5850
+Wire Wire Line
+	5350 5950 5200 5950
+Text Label 5200 5750 2    50   ~ 0
+MUX0
+Text Label 5200 5850 2    50   ~ 0
+MUX1
+Text Label 5200 5950 2    50   ~ 0
+MUX2
+Wire Wire Line
+	5350 6650 5200 6650
+Wire Wire Line
+	5350 6750 5200 6750
+Wire Wire Line
+	5350 6850 5200 6850
+Text Label 5200 6650 2    50   ~ 0
+MUX0
+Text Label 5200 6750 2    50   ~ 0
+MUX1
+Text Label 5200 6850 2    50   ~ 0
+MUX2
+Wire Wire Line
+	3800 1250 3950 1250
+Wire Wire Line
+	3800 1350 3950 1350
+Wire Wire Line
+	3800 1450 3950 1450
+Text Label 3950 1250 0    50   ~ 0
+AN0
+Text Label 3950 1350 0    50   ~ 0
+AN1
+Text Label 3950 1450 0    50   ~ 0
+AN2
+Wire Wire Line
+	3800 1550 3950 1550
+Wire Wire Line
+	3800 1650 3950 1650
+Text Label 3950 1550 0    50   ~ 0
+AN3
+Text Label 3950 1650 0    50   ~ 0
+AN4
+Wire Wire Line
+	3800 1750 3950 1750
+NoConn ~ 3950 1750
+Wire Wire Line
+	5350 3450 5200 3450
+Text Label 5200 4350 2    50   ~ 0
+AN0
+Wire Wire Line
+	5350 4350 5200 4350
+Text Label 5200 7050 2    50   ~ 0
+AN1
+Wire Wire Line
+	5350 5250 5200 5250
+Text Label 5200 3450 2    50   ~ 0
+AN2
+Wire Wire Line
+	5350 6150 5200 6150
+Text Label 5200 6150 2    50   ~ 0
+AN3
+Wire Wire Line
+	5350 7050 5200 7050
+Text Label 5200 5250 2    50   ~ 0
+AN4
+Wire Wire Line
+	3000 2350 2850 2350
+Wire Wire Line
+	3000 2450 2850 2450
+Wire Wire Line
+	3000 2550 2850 2550
+$Sheet
+S 8650 1050 550  400 
+U 60FBB331
+F0 "LED (1)" 50
+F1 "LED1.sch" 50
+F2 "~SS" I L 8650 1150 50 
+F3 "SCK" I L 8650 1250 50 
+F4 "SDI" I L 8650 1350 50 
+F5 "SDO" I R 9200 1350 50 
+$EndSheet
+Wire Wire Line
+	4850 1150 4700 1150
+Text Label 4700 1350 2    50   ~ 0
+MOSI
+Text Label 4700 1250 2    50   ~ 0
+SCK
+Wire Wire Line
+	4700 1250 4850 1250
+Wire Wire Line
+	4700 1350 4850 1350
+Wire Wire Line
+	5800 1150 5650 1150
+Text Label 5650 1250 2    50   ~ 0
+SCK
+Wire Wire Line
+	5650 1250 5800 1250
+Wire Wire Line
+	5400 1350 5800 1350
+Wire Wire Line
+	6750 1150 6600 1150
+Text Label 6600 1150 2    50   ~ 0
+~SS0
+Text Label 6600 1250 2    50   ~ 0
+SCK
+Wire Wire Line
+	6600 1250 6750 1250
+Wire Wire Line
+	6350 1350 6750 1350
+Wire Wire Line
+	7700 1150 7550 1150
+Text Label 7550 1150 2    50   ~ 0
+~SS0
+Text Label 7550 1250 2    50   ~ 0
+SCK
+Wire Wire Line
+	7550 1250 7700 1250
+Wire Wire Line
+	7300 1350 7700 1350
+Wire Wire Line
+	8650 1150 8500 1150
+Text Label 8500 1150 2    50   ~ 0
+~SS0
+Text Label 8500 1250 2    50   ~ 0
+SCK
+Wire Wire Line
+	8500 1250 8650 1250
+Wire Wire Line
+	8250 1350 8650 1350
+Wire Wire Line
+	9600 1150 9450 1150
+Text Label 9450 1150 2    50   ~ 0
+~SS0
+Text Label 9450 1250 2    50   ~ 0
+SCK
+Wire Wire Line
+	9450 1250 9600 1250
+Wire Wire Line
+	9200 1350 9600 1350
+$Sheet
+S 7700 1050 550  400 
+U 60FCDA8B
+F0 "LED (2)" 50
+F1 "LED2.sch" 50
+F2 "~SS" I L 7700 1150 50 
+F3 "SCK" I L 7700 1250 50 
+F4 "SDI" I L 7700 1350 50 
+F5 "SDO" I R 8250 1350 50 
+$EndSheet
+$Sheet
+S 9600 1050 550  400 
+U 60FD28DF
+F0 "LED (3)" 50
+F1 "LED3.sch" 50
+F2 "~SS" I L 9600 1150 50 
+F3 "SCK" I L 9600 1250 50 
+F4 "SDI" I L 9600 1350 50 
+F5 "SDO" I R 10150 1350 50 
+$EndSheet
+$Sheet
+S 6750 1050 550  400 
+U 60FD52CE
+F0 "LED (4)" 50
+F1 "LED4.sch" 50
+F2 "~SS" I L 6750 1150 50 
+F3 "SCK" I L 6750 1250 50 
+F4 "SDI" I L 6750 1350 50 
+F5 "SDO" I R 7300 1350 50 
+$EndSheet
+$Sheet
+S 5800 1050 550  400 
+U 60FD7FEB
+F0 "LED (5)" 50
+F1 "LED5.sch" 50
+F2 "~SS" I L 5800 1150 50 
+F3 "SCK" I L 5800 1250 50 
+F4 "SDI" I L 5800 1350 50 
+F5 "SDO" I R 6350 1350 50 
+$EndSheet
+$Sheet
+S 4850 1050 550  400 
+U 60FDAF39
+F0 "LED (6)" 50
+F1 "LED6.sch" 50
+F2 "~SS" I L 4850 1150 50 
+F3 "SCK" I L 4850 1250 50 
+F4 "SDI" I L 4850 1350 50 
+F5 "SDO" I R 5400 1350 50 
+$EndSheet
+Wire Wire Line
+	10150 1350 10300 1350
+NoConn ~ 10300 1350
+Text Label 7250 3850 2    50   ~ 0
+~SS3
+Wire Wire Line
+	7250 3850 7400 3850
+$Sheet
+S 7400 3750 550  400 
+U 60FED75F
+F0 "LCD" 50
+F1 "LCD.sch" 50
+F2 "~SS" I L 7400 3850 50 
+F3 "SCK" I L 7400 3950 50 
+F4 "SDI" I L 7400 4050 50 
+$EndSheet
+Text Label 7250 3950 2    50   ~ 0
+SCK
+Wire Wire Line
+	7250 3950 7400 3950
+Text Label 7250 4050 2    50   ~ 0
+MOSI
+Wire Wire Line
+	7250 4050 7400 4050
+Text Label 7350 4800 2    50   ~ 0
+~SS2
+Text HLabel 7500 4800 2    50   Input ~ 0
+~SSDSP
+Wire Wire Line
+	7350 4800 7500 4800
+Wire Wire Line
+	7200 2700 7350 2700
+Text Label 7200 2800 2    50   ~ 0
+SCK
+Wire Wire Line
+	7200 2800 7350 2800
+Text Label 7200 2900 2    50   ~ 0
+MOSI
+Wire Wire Line
+	7200 2900 7350 2900
+Wire Wire Line
+	7200 3000 7350 3000
+Text Label 7200 3000 2    50   ~ 0
+MISO
+Text Label 7200 2700 2    50   ~ 0
+~SS4
+Text Label 7350 4900 2    50   ~ 0
+MOSI
+Text Label 7350 5000 2    50   ~ 0
+MISO
+Text Label 7350 5100 2    50   ~ 0
+SCK
+Wire Wire Line
+	7350 4900 7500 4900
+Wire Wire Line
+	7350 5000 7500 5000
+Wire Wire Line
+	7350 5100 7500 5100
+Text HLabel 7500 4900 2    50   Input ~ 0
+SDO
+Text HLabel 7500 5000 2    50   Input ~ 0
+SDI
+Text HLabel 7500 5100 2    50   Input ~ 0
+SCK
+Text HLabel 2850 2350 0    50   Input ~ 0
+CLK_IN
+Text HLabel 2850 2450 0    50   Input ~ 0
+CLK_OUT
+Text HLabel 2850 2550 0    50   Input ~ 0
+SYNC_OUT
+Text HLabel 1550 6100 0    50   Input ~ 0
+SYNC_IN
+Wire Wire Line
+	8350 2700 8500 2700
+Text Label 8350 2800 2    50   ~ 0
+SCK
+Wire Wire Line
+	8350 2800 8500 2800
+Text Label 8350 2900 2    50   ~ 0
+MOSI
+Wire Wire Line
+	8350 2900 8500 2900
+Wire Wire Line
+	8350 3000 8500 3000
+Text Label 8350 3000 2    50   ~ 0
+MISO
+Text Label 8350 2700 2    50   ~ 0
+~SS5
+Wire Wire Line
+	9450 2700 9600 2700
+Text Label 9450 2800 2    50   ~ 0
+SCK
+Wire Wire Line
+	9450 2800 9600 2800
+Text Label 9450 2900 2    50   ~ 0
+MOSI
+Wire Wire Line
+	9450 2900 9600 2900
+Wire Wire Line
+	9450 3000 9600 3000
+Text Label 9450 3000 2    50   ~ 0
+MISO
+Text Label 9450 2700 2    50   ~ 0
+~SS6
+Text Label 4000 3850 0    50   ~ 0
+~SS6
+Text Label 4000 3950 0    50   ~ 0
+~SS7
+$Sheet
+S 7350 2600 550  500 
+U 610023E4
+F0 "EEPROM1" 50
+F1 "EEPROM1.sch" 50
+F2 "~SS" I L 7350 2700 50 
+F3 "SCK" I L 7350 2800 50 
+F4 "SDI" I L 7350 2900 50 
+F5 "SDO" I L 7350 3000 50 
+$EndSheet
+$Sheet
+S 8500 2600 550  500 
+U 613EB8A1
+F0 "EEPROM2" 50
+F1 "EEPROM2.sch" 50
+F2 "~SS" I L 8500 2700 50 
+F3 "SCK" I L 8500 2800 50 
+F4 "SDI" I L 8500 2900 50 
+F5 "SDO" I L 8500 3000 50 
+$EndSheet
+$Sheet
+S 9600 2600 550  500 
+U 613EFE39
+F0 "EEPROM3" 50
+F1 "EEPROM3.sch" 50
+F2 "~SS" I L 9600 2700 50 
+F3 "SCK" I L 9600 2800 50 
+F4 "SDI" I L 9600 2900 50 
+F5 "SDO" I L 9600 3000 50 
+$EndSheet
+Text Label 5650 1150 2    50   ~ 0
+~SS0
+Text Label 4700 1150 2    50   ~ 0
+~SS0
+Wire Wire Line
+	1550 6100 1550 6150
+Wire Wire Line
+	1550 6150 1700 6150
+$EndSCHEMATC

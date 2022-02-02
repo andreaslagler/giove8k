@@ -1,0 +1,600 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 6 9
+Title "DSP"
+Date "2021-07-24"
+Rev "1.0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 "Wave-generating DSP"
+$EndDescr
+$Comp
+L AudioBoard-rescue:C_Small-Audio-DSP-rescue C28
+U 1 1 61567937
+P 2450 3100
+F 0 "C28" H 2460 3170 50  0000 L CNN
+F 1 "100n" H 2460 3020 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 2450 3100 60  0001 C CNN
+F 3 "" H 2450 3100 60  0000 C CNN
+	1    2450 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L AudioBoard-rescue:C_Small-Audio-DSP-rescue C27
+U 1 1 61567938
+P 2150 3100
+F 0 "C27" H 2160 3170 50  0000 L CNN
+F 1 "100n" H 2160 3020 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 2150 3100 60  0001 C CNN
+F 3 "" H 2150 3100 60  0000 C CNN
+	1    2150 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L AudioBoard-rescue:CP_Small-Audio-DSP-rescue C29
+U 1 1 61567939
+P 2750 3100
+F 0 "C29" H 2760 3170 50  0000 L CNN
+F 1 "10u" H 2760 3020 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 2750 3100 60  0001 C CNN
+F 3 "" H 2750 3100 60  0000 C CNN
+	1    2750 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L AudioBoard-rescue:GND-Audio-DSP-rescue #PWR080
+U 1 1 6156793A
+P 2150 3200
+F 0 "#PWR080" H 2150 2950 50  0001 C CNN
+F 1 "GND" H 2150 3050 50  0000 C CNN
+F 2 "" H 2150 3200 60  0000 C CNN
+F 3 "" H 2150 3200 60  0000 C CNN
+	1    2150 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L AudioBoard-rescue:GND-Audio-DSP-rescue #PWR081
+U 1 1 6156793B
+P 2450 3200
+F 0 "#PWR081" H 2450 2950 50  0001 C CNN
+F 1 "GND" H 2450 3050 50  0000 C CNN
+F 2 "" H 2450 3200 60  0000 C CNN
+F 3 "" H 2450 3200 60  0000 C CNN
+	1    2450 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L AudioBoard-rescue:GND-Audio-DSP-rescue #PWR082
+U 1 1 6156793C
+P 2750 3200
+F 0 "#PWR082" H 2750 2950 50  0001 C CNN
+F 1 "GND" H 2750 3050 50  0000 C CNN
+F 2 "" H 2750 3200 60  0000 C CNN
+F 3 "" H 2750 3200 60  0000 C CNN
+	1    2750 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L AudioBoard-rescue:GND-Audio-DSP-rescue #PWR088
+U 1 1 6156793D
+P 2750 4200
+F 0 "#PWR088" H 2750 3950 50  0001 C CNN
+F 1 "GND" H 2750 4050 50  0000 C CNN
+F 2 "" H 2750 4200 60  0000 C CNN
+F 3 "" H 2750 4200 60  0000 C CNN
+	1    2750 4200
+	1    0    0    -1  
+$EndComp
+Text Label 5600 1800 0    60   ~ 0
+OSC1
+Text Label 5600 1900 0    60   ~ 0
+OSC2
+$Comp
+L AudioBoard-rescue:+3.3V-Audio-DSP-rescue #PWR073
+U 1 1 6156793E
+P 2150 2100
+F 0 "#PWR073" H 2150 1950 50  0001 C CNN
+F 1 "+3.3V" H 2150 2240 50  0000 C CNN
+F 2 "" H 2150 2100 60  0000 C CNN
+F 3 "" H 2150 2100 60  0000 C CNN
+	1    2150 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 2900 2750 2900
+Wire Wire Line
+	2750 2900 2750 3000
+Wire Wire Line
+	3000 2600 2450 2600
+Wire Wire Line
+	2450 2100 2450 2600
+Wire Wire Line
+	3000 2200 2150 2200
+Wire Wire Line
+	2150 2100 2150 2200
+Wire Wire Line
+	2750 3650 2750 4000
+Wire Wire Line
+	3000 4000 2750 4000
+Connection ~ 2750 4000
+Connection ~ 2450 2600
+Connection ~ 2150 2200
+Text Label 5600 3300 0    60   ~ 0
+SCK1
+Text Label 5600 3500 0    60   ~ 0
+SDI1
+Text Label 5600 3400 0    60   ~ 0
+SDO1
+Text Label 5600 2900 0    60   ~ 0
+PGED
+Text Label 3000 1600 2    60   ~ 0
+~MCLR
+Text HLabel 5800 4050 2    60   Input ~ 0
+SCK0
+Text HLabel 5800 3850 2    60   Input ~ 0
+SDI0
+Text HLabel 5800 3750 2    60   Input ~ 0
+~SS0
+Wire Wire Line
+	5600 4100 5700 4100
+Wire Wire Line
+	5700 4100 5700 4050
+Wire Wire Line
+	5700 4050 5800 4050
+Wire Wire Line
+	5600 3900 5700 3900
+Wire Wire Line
+	5700 3900 5700 3850
+Wire Wire Line
+	5700 3850 5800 3850
+Wire Wire Line
+	5600 4000 5700 4000
+Wire Wire Line
+	5700 4000 5700 3950
+Wire Wire Line
+	5700 3950 5800 3950
+Text Label 6000 5050 0    60   ~ 0
+~MCLR
+$Comp
+L AudioBoard-rescue:C_Small-Audio-DSP-rescue C33
+U 1 1 6156793F
+P 5850 5250
+F 0 "C33" H 5860 5320 50  0000 L CNN
+F 1 "100n" H 5860 5170 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 5850 5250 60  0001 C CNN
+F 3 "" H 5850 5250 60  0000 C CNN
+	1    5850 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 5350 5850 5450
+Wire Wire Line
+	5850 4950 5850 5050
+Connection ~ 5850 5050
+$Comp
+L AudioBoard-rescue:GND-Audio-DSP-rescue #PWR095
+U 1 1 61567C5E
+P 5850 5450
+F 0 "#PWR095" H 5850 5200 50  0001 C CNN
+F 1 "GND" H 5850 5300 50  0000 C CNN
+F 2 "" H 5850 5450 60  0000 C CNN
+F 3 "" H 5850 5450 60  0000 C CNN
+	1    5850 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L AudioBoard-rescue:R_Small-Audio-DSP-rescue R4
+U 1 1 61567C5F
+P 5850 4850
+F 0 "R4" H 5880 4870 50  0000 L CNN
+F 1 "10k" H 5880 4810 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5850 4850 60  0001 C CNN
+F 3 "" H 5850 4850 60  0000 C CNN
+	1    5850 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L AudioBoard-rescue:+3.3V-Audio-DSP-rescue #PWR089
+U 1 1 5BCB61C4
+P 5850 4750
+F 0 "#PWR089" H 5850 4600 50  0001 C CNN
+F 1 "+3.3V" H 5850 4890 50  0000 C CNN
+F 2 "" H 5850 4750 60  0000 C CNN
+F 3 "" H 5850 4750 60  0000 C CNN
+	1    5850 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L AudioBoard-rescue:Conn_01x06-Audio-DSP-rescue J6
+U 1 1 61567C61
+P 4900 5150
+F 0 "J6" H 4900 5450 50  0000 C CNN
+F 1 "ICSP" H 4900 4750 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-06A_1x06_P2.54mm_Vertical" H 4900 5150 50  0001 C CNN
+F 3 "" H 4900 5150 50  0001 C CNN
+	1    4900 5150
+	1    0    0    -1  
+$EndComp
+Text Label 4700 4950 2    60   ~ 0
+~MCLR
+Text Label 4700 5250 2    60   ~ 0
+PGED
+Wire Wire Line
+	4700 5150 4050 5150
+Wire Wire Line
+	4050 5150 4050 5200
+Wire Wire Line
+	4700 5050 4050 5050
+Wire Wire Line
+	4050 5050 4050 5000
+$Comp
+L AudioBoard-rescue:GND-Audio-DSP-rescue #PWR091
+U 1 1 61567944
+P 4050 5200
+F 0 "#PWR091" H 4050 4950 50  0001 C CNN
+F 1 "GND" H 4050 5050 50  0000 C CNN
+F 2 "" H 4050 5200 60  0000 C CNN
+F 3 "" H 4050 5200 60  0000 C CNN
+	1    4050 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L AudioBoard-rescue:+3.3V-Audio-DSP-rescue #PWR090
+U 1 1 61567945
+P 4050 5000
+F 0 "#PWR090" H 4050 4850 50  0001 C CNN
+F 1 "+3.3V" H 4050 5140 50  0000 C CNN
+F 2 "" H 4050 5000 60  0000 C CNN
+F 3 "" H 4050 5000 60  0000 C CNN
+	1    4050 5000
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4700 5450
+$Comp
+L AudioBoard-rescue:Crystal_Small-Audio-DSP-rescue Y5
+U 1 1 61567946
+P 2350 5000
+F 0 "Y5" H 2350 5100 50  0000 C CNN
+F 1 "10MHz" H 2350 4900 50  0000 C CNN
+F 2 "Crystal:Crystal_HC49-U_Vertical" H 2350 5000 60  0001 C CNN
+F 3 "" H 2350 5000 60  0000 C CNN
+	1    2350 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L AudioBoard-rescue:C_Small-Audio-DSP-rescue C31
+U 1 1 61567947
+P 2150 5200
+F 0 "C31" H 2160 5270 50  0000 L CNN
+F 1 "18p" H 2160 5120 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 2150 5200 60  0001 C CNN
+F 3 "" H 2150 5200 60  0000 C CNN
+	1    2150 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L AudioBoard-rescue:C_Small-Audio-DSP-rescue C32
+U 1 1 61567948
+P 2550 5200
+F 0 "C32" H 2560 5270 50  0000 L CNN
+F 1 "18p" H 2560 5120 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 2550 5200 60  0001 C CNN
+F 3 "" H 2550 5200 60  0000 C CNN
+	1    2550 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L AudioBoard-rescue:GND-Audio-DSP-rescue #PWR092
+U 1 1 61567949
+P 2150 5300
+F 0 "#PWR092" H 2150 5050 50  0001 C CNN
+F 1 "GND" H 2150 5150 50  0000 C CNN
+F 2 "" H 2150 5300 60  0000 C CNN
+F 3 "" H 2150 5300 60  0000 C CNN
+	1    2150 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L AudioBoard-rescue:GND-Audio-DSP-rescue #PWR093
+U 1 1 6156794A
+P 2550 5300
+F 0 "#PWR093" H 2550 5050 50  0001 C CNN
+F 1 "GND" H 2550 5150 50  0000 C CNN
+F 2 "" H 2550 5300 60  0000 C CNN
+F 3 "" H 2550 5300 60  0000 C CNN
+	1    2550 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 4850 2150 5000
+Wire Wire Line
+	2150 5000 2250 5000
+Wire Wire Line
+	2450 5000 2550 5000
+Wire Wire Line
+	2550 4850 2550 5000
+Connection ~ 2150 5000
+Connection ~ 2550 5000
+Text Label 2150 4850 0    60   ~ 0
+OSC1
+Text Label 2550 4850 0    60   ~ 0
+OSC2
+$Comp
+L AudioBoard-rescue:23LC_SRAM-Audio-DSP-rescue U9
+U 1 1 6156794B
+P 8000 2450
+F 0 "U9" H 7700 2700 50  0000 L CNN
+F 1 "23LC_SRAM" H 8050 2700 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 7650 2400 50  0001 C CNN
+F 3 "" H 7650 2400 50  0001 C CNN
+	1    8000 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L AudioBoard-rescue:+3.3V-Audio-DSP-rescue #PWR076
+U 1 1 61567C6A
+P 8000 2150
+F 0 "#PWR076" H 8000 2000 50  0001 C CNN
+F 1 "+3.3V" H 8000 2290 50  0000 C CNN
+F 2 "" H 8000 2150 60  0000 C CNN
+F 3 "" H 8000 2150 60  0000 C CNN
+	1    8000 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L AudioBoard-rescue:GND-Audio-DSP-rescue #PWR079
+U 1 1 6156794D
+P 8000 2750
+F 0 "#PWR079" H 8000 2500 50  0001 C CNN
+F 1 "GND" H 8000 2600 50  0000 C CNN
+F 2 "" H 8000 2750 60  0000 C CNN
+F 3 "" H 8000 2750 60  0000 C CNN
+	1    8000 2750
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7600 2350
+Wire Wire Line
+	7600 2450 7500 2450
+Wire Wire Line
+	7500 2450 7500 2150
+$Comp
+L AudioBoard-rescue:+3.3V-Audio-DSP-rescue #PWR075
+U 1 1 61567C6C
+P 7500 2150
+F 0 "#PWR075" H 7500 2000 50  0001 C CNN
+F 1 "+3.3V" H 7500 2290 50  0000 C CNN
+F 2 "" H 7500 2150 60  0000 C CNN
+F 3 "" H 7500 2150 60  0000 C CNN
+	1    7500 2150
+	1    0    0    -1  
+$EndComp
+Text Label 8400 2350 0    60   ~ 0
+SCK1
+Text Label 8400 2550 0    60   ~ 0
+SDI1
+Text Label 7600 2550 2    60   ~ 0
+~SS10
+Text Label 8400 2450 0    60   ~ 0
+SDO1
+$Comp
+L AudioBoard-rescue:23LC_SRAM-Audio-DSP-rescue U11
+U 1 1 61567C6D
+P 8000 3500
+F 0 "U11" H 7700 3750 50  0000 L CNN
+F 1 "23LC_SRAM" H 8050 3750 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 7650 3450 50  0001 C CNN
+F 3 "" H 7650 3450 50  0001 C CNN
+	1    8000 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L AudioBoard-rescue:+3.3V-Audio-DSP-rescue #PWR084
+U 1 1 5BCD384F
+P 8000 3200
+F 0 "#PWR084" H 8000 3050 50  0001 C CNN
+F 1 "+3.3V" H 8000 3340 50  0000 C CNN
+F 2 "" H 8000 3200 60  0000 C CNN
+F 3 "" H 8000 3200 60  0000 C CNN
+	1    8000 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L AudioBoard-rescue:GND-Audio-DSP-rescue #PWR087
+U 1 1 5BCD3855
+P 8000 3800
+F 0 "#PWR087" H 8000 3550 50  0001 C CNN
+F 1 "GND" H 8000 3650 50  0000 C CNN
+F 2 "" H 8000 3800 60  0000 C CNN
+F 3 "" H 8000 3800 60  0000 C CNN
+	1    8000 3800
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7600 3400
+Wire Wire Line
+	7600 3500 7500 3500
+Wire Wire Line
+	7500 3500 7500 3200
+$Comp
+L AudioBoard-rescue:+3.3V-Audio-DSP-rescue #PWR083
+U 1 1 61567C70
+P 7500 3200
+F 0 "#PWR083" H 7500 3050 50  0001 C CNN
+F 1 "+3.3V" H 7500 3340 50  0000 C CNN
+F 2 "" H 7500 3200 60  0000 C CNN
+F 3 "" H 7500 3200 60  0000 C CNN
+	1    7500 3200
+	1    0    0    -1  
+$EndComp
+Text Label 8400 3400 0    60   ~ 0
+SCK1
+Text Label 8400 3600 0    60   ~ 0
+SDI1
+Text Label 7600 3600 2    60   ~ 0
+~SS11
+Text Label 8400 3500 0    60   ~ 0
+SDO1
+Wire Wire Line
+	5600 3800 5700 3800
+Wire Wire Line
+	5700 3800 5700 3750
+Wire Wire Line
+	5700 3750 5800 3750
+Text HLabel 5800 3950 2    60   Input ~ 0
+SDO0
+Wire Wire Line
+	5700 5050 5850 5050
+$Comp
+L AudioBoard-rescue:SW_Push-Audio-DSP-rescue SW4
+U 1 1 61567953
+P 5500 5050
+F 0 "SW4" H 5550 5150 50  0000 L CNN
+F 1 "RESET" H 5500 4990 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 5500 5250 50  0001 C CNN
+F 3 "" H 5500 5250 50  0001 C CNN
+	1    5500 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L AudioBoard-rescue:GND-Audio-DSP-rescue #PWR094
+U 1 1 61567954
+P 5300 5450
+F 0 "#PWR094" H 5300 5200 50  0001 C CNN
+F 1 "GND" H 5300 5300 50  0000 C CNN
+F 2 "" H 5300 5450 60  0000 C CNN
+F 3 "" H 5300 5450 60  0000 C CNN
+	1    5300 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 5450 5300 5050
+$Comp
+L AudioBoard-rescue:C_Small-Audio-DSP-rescue C30
+U 1 1 61567955
+P 9250 3450
+F 0 "C30" H 9260 3520 50  0000 L CNN
+F 1 "100n" H 9260 3370 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 9250 3450 60  0001 C CNN
+F 3 "" H 9250 3450 60  0000 C CNN
+	1    9250 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L AudioBoard-rescue:+3.3V-Audio-DSP-rescue #PWR085
+U 1 1 61567956
+P 9250 3350
+F 0 "#PWR085" H 9250 3200 50  0001 C CNN
+F 1 "+3.3V" H 9250 3490 50  0000 C CNN
+F 2 "" H 9250 3350 60  0000 C CNN
+F 3 "" H 9250 3350 60  0000 C CNN
+	1    9250 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L AudioBoard-rescue:GND-Audio-DSP-rescue #PWR086
+U 1 1 61567957
+P 9250 3550
+F 0 "#PWR086" H 9250 3300 50  0001 C CNN
+F 1 "GND" H 9250 3400 50  0000 C CNN
+F 2 "" H 9250 3550 60  0000 C CNN
+F 3 "" H 9250 3550 60  0000 C CNN
+	1    9250 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L AudioBoard-rescue:C_Small-Audio-DSP-rescue C26
+U 1 1 61567C76
+P 9250 2450
+F 0 "C26" H 9260 2520 50  0000 L CNN
+F 1 "100n" H 9260 2370 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 9250 2450 60  0001 C CNN
+F 3 "" H 9250 2450 60  0000 C CNN
+	1    9250 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L AudioBoard-rescue:+3.3V-Audio-DSP-rescue #PWR077
+U 1 1 5BCF1B0C
+P 9250 2350
+F 0 "#PWR077" H 9250 2200 50  0001 C CNN
+F 1 "+3.3V" H 9250 2490 50  0000 C CNN
+F 2 "" H 9250 2350 60  0000 C CNN
+F 3 "" H 9250 2350 60  0000 C CNN
+	1    9250 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L AudioBoard-rescue:GND-Audio-DSP-rescue #PWR078
+U 1 1 61567C78
+P 9250 2550
+F 0 "#PWR078" H 9250 2300 50  0001 C CNN
+F 1 "GND" H 9250 2400 50  0000 C CNN
+F 2 "" H 9250 2550 60  0000 C CNN
+F 3 "" H 9250 2550 60  0000 C CNN
+	1    9250 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 2600 2450 3000
+Wire Wire Line
+	2150 2200 2150 3000
+Wire Wire Line
+	5850 5050 5850 5150
+Wire Wire Line
+	5850 5050 6000 5050
+Wire Wire Line
+	2150 5000 2150 5100
+Wire Wire Line
+	2550 5000 2550 5100
+Wire Wire Line
+	3000 3650 2750 3650
+Text Label 5600 2800 0    60   ~ 0
+PGEC
+NoConn ~ 5600 2000
+NoConn ~ 5600 2700
+NoConn ~ 5600 3600
+NoConn ~ 5600 3100
+Text Label 4700 5350 2    60   ~ 0
+PGEC
+$Comp
+L AudioBoard-rescue:+3.3V-Audio-DSP-rescue #PWR074
+U 1 1 6156795B
+P 2450 2100
+F 0 "#PWR074" H 2450 1950 50  0001 C CNN
+F 1 "+3.3V" H 2450 2240 50  0000 C CNN
+F 2 "" H 2450 2100 60  0000 C CNN
+F 3 "" H 2450 2100 60  0000 C CNN
+	1    2450 2100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5600 1600
+NoConn ~ 5600 1700
+Text Label 5600 3700 0    60   ~ 0
+~SS11
+Text Label 5600 3200 0    60   ~ 0
+~SS10
+$Comp
+L AudioBoard-rescue:Audio_DSPIC33EP128GP502-dspic33ep U10
+U 1 1 61567C7A
+P 4300 3400
+F 0 "U10" H 4300 5556 50  0000 C CNN
+F 1 "DSPIC33EP128GP502" H 4300 5465 50  0000 C CNN
+F 2 "Package_DIP:DIP-28_W7.62mm" H 4300 5374 50  0000 C CIN
+F 3 "" H 3600 3000 60  0000 C CNN
+	1    4300 3400
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5600 3000
+NoConn ~ 5600 2600
+Wire Wire Line
+	2750 4000 2750 4100
+Wire Wire Line
+	3000 4100 2750 4100
+Connection ~ 2750 4100
+Wire Wire Line
+	2750 4100 2750 4200
+$EndSCHEMATC

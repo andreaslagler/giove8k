@@ -1,0 +1,110 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 23 24
+Title "Power (Controller)"
+Date "2021-08-02"
+Rev "1.0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 "Power Supply for Controller Board"
+$EndDescr
+$Comp
+L Device:C C24
+U 1 1 60F9ABDD
+P 5200 3950
+F 0 "C24" H 5315 3996 50  0000 L CNN
+F 1 "100n" H 5315 3905 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 5238 3800 50  0001 C CNN
+F 3 "~" H 5200 3950 50  0001 C CNN
+	1    5200 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C25
+U 1 1 60F9D4A6
+P 6400 3950
+F 0 "C25" H 6518 3996 50  0000 L CNN
+F 1 "100u" H 6518 3905 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D8.0mm_P5.00mm" H 6438 3800 50  0001 C CNN
+F 3 "~" H 6400 3950 50  0001 C CNN
+	1    6400 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 3800 5500 3800
+Wire Wire Line
+	6100 3800 6400 3800
+$Comp
+L power:GND #PWR0281
+U 1 1 60F9DA80
+P 5200 4100
+F 0 "#PWR0281" H 5200 3850 50  0001 C CNN
+F 1 "GND" H 5205 3927 50  0000 C CNN
+F 2 "" H 5200 4100 50  0001 C CNN
+F 3 "" H 5200 4100 50  0001 C CNN
+	1    5200 4100
+	1    0    0    -1  
+$EndComp
+Connection ~ 5200 3800
+$Comp
+L Regulator_Linear:LM1117-5.0 U20
+U 1 1 61096678
+P 5800 3800
+F 0 "U20" H 5800 4042 50  0000 C CNN
+F 1 "LM1117-5.0" H 5800 3951 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5800 3800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm1117.pdf" H 5800 3800 50  0001 C CNN
+	1    5800 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+6V #PWR0287
+U 1 1 6109814F
+P 5200 3800
+F 0 "#PWR0287" H 5200 3650 50  0001 C CNN
+F 1 "+6V" H 5215 3973 50  0000 C CNN
+F 2 "" H 5200 3800 50  0001 C CNN
+F 3 "" H 5200 3800 50  0001 C CNN
+	1    5200 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0280
+U 1 1 615A04B1
+P 5800 4100
+F 0 "#PWR0280" H 5800 3850 50  0001 C CNN
+F 1 "GND" H 5805 3927 50  0000 C CNN
+F 2 "" H 5800 4100 50  0001 C CNN
+F 3 "" H 5800 4100 50  0001 C CNN
+	1    5800 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0282
+U 1 1 615A04BB
+P 6400 4100
+F 0 "#PWR0282" H 6400 3850 50  0001 C CNN
+F 1 "GND" H 6405 3927 50  0000 C CNN
+F 2 "" H 6400 4100 50  0001 C CNN
+F 3 "" H 6400 4100 50  0001 C CNN
+	1    6400 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0203
+U 1 1 615A2AFE
+P 6400 3800
+F 0 "#PWR0203" H 6400 3650 50  0001 C CNN
+F 1 "+5V" H 6415 3973 50  0000 C CNN
+F 2 "" H 6400 3800 50  0001 C CNN
+F 3 "" H 6400 3800 50  0001 C CNN
+	1    6400 3800
+	1    0    0    -1  
+$EndComp
+Connection ~ 6400 3800
+$EndSCHEMATC
