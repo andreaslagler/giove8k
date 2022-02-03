@@ -10,15 +10,15 @@
 [submodule "sw/Controller/avr_devices"]
 	path = sw/Controller/avr_devices
 	url = git@github.com:andreaslagler/avr_devices
-[submodule "sw/Audio.X/dspic33_fp_lib"]
-	path = sw/Audio.X/dspic33_fp_lib
+[submodule "sw/AudioMaster.X/dspic33_fp_lib"]
+	path = sw/AudioMaster.X/dspic33_fp_lib
 	url = git@github.com:andreaslagler/dspic33_fp_lib
-[submodule "sw/Audio.X/dspic33_synth_lib"]
-	path = sw/Audio.X/dspic33_synth_lib
+[submodule "sw/AudioMaster.X/dspic33_synth_lib"]
+	path = sw/AudioMaster.X/dspic33_synth_lib
 	url = git@github.com:andreaslagler/dspic33_synth_lib
-[submodule "sw/WaveGen.X/dspic33_fp_lib"]
-	path = sw/WaveGen.X/dspic33_fp_lib
+[submodule "sw/AudioSlave.X/dspic33_fp_lib"]
+	path = sw/AudioSlave.X/dspic33_fp_lib
 	url = git@github.com:andreaslagler/dspic33_fp_lib
-[submodule "sw/WaveGen.X/dspic33_synth_lib"]
-	path = sw/WaveGen.X/dspic33_synth_lib
+[submodule "sw/AudioSlave.X/dspic33_synth_lib"]
+	path = sw/AudioSlave.X/dspic33_synth_lib
 	url = git@github.com:andreaslagler/dspic33_synth_lib

@@ -19,15 +19,15 @@
       <itemPath>filter.c</itemPath>
       <itemPath>oscillator.c</itemPath>
       <itemPath>wave_interface.c</itemPath>
-      <itemPath>../Audio.X/dspic33_synth_lib/sw/src/env_adsr.c</itemPath>
-      <itemPath>../Audio.X/dspic33_synth_lib/sw/src/glide.c</itemPath>
-      <itemPath>../Audio.X/dspic33_synth_lib/sw/src/iir_1pole.c</itemPath>
-      <itemPath>../Audio.X/dspic33_synth_lib/sw/src/lfo.c</itemPath>
-      <itemPath>../Audio.X/dspic33_synth_lib/sw/src/note_to_freq.c</itemPath>
-      <itemPath>../Audio.X/dspic33_synth_lib/sw/src/stereo_chorus.c</itemPath>
-      <itemPath>../Audio.X/dspic33_synth_lib/sw/src/stereo_delay.c</itemPath>
-      <itemPath>../Audio.X/dspic33_synth_lib/sw/src/svf_2pole.c</itemPath>
-      <itemPath>../Audio.X/dspic33_synth_lib/sw/src/tone_control_2band.c</itemPath>
+      <itemPath>dspic33_synth_lib/sw/src/env_adsr.c</itemPath>
+      <itemPath>dspic33_synth_lib/sw/src/glide.c</itemPath>
+      <itemPath>dspic33_synth_lib/sw/src/iir_1pole.c</itemPath>
+      <itemPath>dspic33_synth_lib/sw/src/lfo.c</itemPath>
+      <itemPath>dspic33_synth_lib/sw/src/note_to_freq.c</itemPath>
+      <itemPath>dspic33_synth_lib/sw/src/stereo_chorus.c</itemPath>
+      <itemPath>dspic33_synth_lib/sw/src/stereo_delay.c</itemPath>
+      <itemPath>dspic33_synth_lib/sw/src/svf_2pole.c</itemPath>
+      <itemPath>dspic33_synth_lib/sw/src/tone_control_2band.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
