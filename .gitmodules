@@ -22,3 +22,6 @@
 [submodule "sw/AudioSlave.X/dspic33_synth_lib"]
 	path = sw/AudioSlave.X/dspic33_synth_lib
 	url = git@github.com:andreaslagler/dspic33_synth_lib
+[submodule "sw/Controller/hal_avr_m1284p"]
+	path = sw/Controller/hal_avr_m1284p
+	url = git@github.com:andreaslagler/hal_avr_m1284p.git
